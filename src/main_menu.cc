@@ -1,19 +1,45 @@
 /**
- * @file menu.cc
+ * Universidad de La Laguna (ULL)
+ * Escuela Superior de Ingenieria y Tecnologia (ESIT)
+ * Grado en Ingenieria Informatica
+ * Asignatura: Fundamentos de Ingenieria del Software (F.I.S.)
+ * Curso: 2º
+ * Practica 7: Desarrollo Agil (I)
  * @author FIS_E03
- * @brief 
- * @version 0.1
- * @date 2022-05-02
+ * Correo: alu0101394763@ull.edu.es
+ * @date 06/05/2022
+ * 
+ * @file main_menu.cc (programa cliente)
+ * @brief Programa que nos permite usar una implementacion de una plataforma de
+ * recogida de firmas la cual te permite hacer una serie de acciones que toda
+ * plataforma como este podria hacer como permitirte registrarte como usuario
+ * crear peticiones, firmar peticiones de otros usuarios, etc...
+ * 
+ * Si quiere saber mas detalles sobre como usar el programa ejecutable,
+ * ejecute: ./main_menu --help
+ * para mas informacion.
+ * 
+ * @bug No hay bugs conocidos
+ * 
+ * Referencias:
+ * @see https://www.change.org/es
+ * @see https://www.ipetitions.com/
+ * @see https://www.causes.com/
  * 
  * @copyright Copyright (c) 2022
- * 
+ * @version 1.0.0
+ * @brief Historial de Revisiones 
+ * 06/05/2022 - Creacion (primera version) del codigo:
+ *              Solo creamos el archivo, pusimos el comentario de
+ *              cabecera y declarado los #include necesarios.
+ * 08/05/2022 - Archivo terminado.
  */
 
-#include <iostream>
-#include <vector>
-#include <string>
+/// Donde declaramos las funciones del main_menu.cc y las librerías necesarias
+#include "../include/main_functions.h"
 
 int main(int argc, char* argv[]) {
+  Usage(argc, argv); ///< Comprobamos los argumentos del programa
   bool user_in_list, sesion = false;
   char  donative, option = 'A';
 	std::string search_word,user_name,user_passwd,user_passwd2,title,description;
