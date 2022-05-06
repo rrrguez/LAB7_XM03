@@ -36,6 +36,10 @@
 
 #include <iostream>
 
+class DataBase {
+ public:
+ private:
+}
 
 
 #endif
