@@ -9,9 +9,9 @@
  * Correo: alu0101394763@ull.edu.es
  * @date 06/05/2022
  * 
- * @file User.cc
- * @brief Donde se desarrollan los metodos de la clase User contenida
- * en el archivo de cabecera User.h
+ * @file Petition.cc
+ * @brief Donde se desarrollan los metodos de la clase Petition contenida
+ * en el archivo de cabecera Petition.h
  *
  * @bug No hay bugs conocidos
  * 
@@ -27,5 +27,5 @@
  * 08/05/22 - Archivo terminado.
  */
 
-#include "../include/User.h"
+#include "../include/petition.h"
 
