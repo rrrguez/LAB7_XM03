@@ -5,12 +5,12 @@ Miembros del grupo FIS_E03:
 
 1º Cristopher Manuel Afonso Mora ==> alu0101402031@ull.edu.es
 
-2º
+2º Julio Iván Carrasco Armas
 
-3º
+3º Fernando Marrero Hernández
 
-4º
+4º Sergio Perera Márquez
 
-5º
+5º Rebeca Rodríguez Rodríguez ==> alu0101394763@ull.edu.es
 
-6º
+6º Pablo Urquía Adrián
