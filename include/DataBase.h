@@ -39,7 +39,7 @@
 class DataBase {
  public:
  private:
-}
+}; 
 
 
-#endif
+#endif // _DATABASE_
