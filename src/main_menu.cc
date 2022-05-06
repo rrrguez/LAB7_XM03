@@ -5,7 +5,7 @@
  * Asignatura: Fundamentos de Ingenieria del Software (F.I.S.)
  * Curso: 2º
  * Practica 7: Desarrollo Agil (I)
- * @author FIS_E03
+ * @author FIS_E03 (Fernando - Pablo)
  * Correo: alu0101394763@ull.edu.es
  * @date 06/05/2022
  * 

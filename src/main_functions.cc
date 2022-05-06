@@ -5,7 +5,7 @@
  * Asignatura: Fundamentos de Ingenieria del Software (F.I.S.)
  * Curso: 2º
  * Practica 7: Desarrollo Agil (I)
- * @author FIS_E03
+ * @author FIS_E03 (Cristopher - Rebeca)
  * Correo: alu0101394763@ull.edu.es
  * @date 06/05/2022
  * 
@@ -29,7 +29,8 @@
 
 #include "../include/main_functions.h"
 
-/// nos permite usar std::cout usando cout sin usar malas practicas
+/// nos permite usar std::cout y std::cerr usando cout y cerr directamente
+/// sin usar malas practicas como "using namespace std"
 using std::cout;
 using std::cerr;
 
