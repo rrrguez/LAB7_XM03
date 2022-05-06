@@ -9,7 +9,7 @@ Miembros del grupo FIS_E03:
 
 3º Fernando Marrero Hernández
 
-4º Sergio Perera Márquez
+4º Sergio Perera Márquez ==> alu0101394503@ull.edu.es
 
 5º Rebeca Rodríguez Rodríguez ==> alu0101394763@ull.edu.es
 
