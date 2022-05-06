@@ -39,6 +39,7 @@
 class DataBase {
  public:
  private:
+  int user_number_;
 }
 
 
