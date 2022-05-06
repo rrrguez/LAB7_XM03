@@ -39,6 +39,7 @@
 class DataBase {
  public:
  private:
+  std::string name_;
 }
 
 
