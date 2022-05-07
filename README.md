@@ -5,7 +5,7 @@ Miembros del grupo FIS_E03:
 
 1º Cristopher Manuel Afonso Mora ==> alu0101402031@ull.edu.es
 
-2º Julio Iván Carrasco Armas
+2º Julio Iván Carrasco Armas ==> alu0101110639@ull.edu.es
 
 3º Fernando Marrero Hernández
 
