@@ -28,19 +28,24 @@
  */
 
 #include "../include/data_base.h"
+namespace fs = std::filesystem;
 
 /**
  * @brief Construct a new Data_base::Data_base object
  * 
  */
 Data_base::Data_base() {
-  // Create all user files in /users/ folder
-  // open files from /users/ folder
-  
-  // Read a file from /users/ folder
-  
+  /// Create all user files in /users/ folder
 
+  /// Read a file from /users/ folder
 
+  std::string path = "../users";
+  for (const auto & entry : fs::directory_iterator(path)) {
+    std::string file_name = entry.path().string();
+    file_name.erase(0, 9);
+    file_name.erase(file_name.size() - 4, file_name.size());
+  }
+  
 
   
 
