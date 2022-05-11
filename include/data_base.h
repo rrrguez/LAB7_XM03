@@ -43,8 +43,8 @@ class Data_base {
  public:
     Data_base();
     ~Data_base();
-    bool AddUser(const std::string &);
-    bool FindUser(const std::string &);
+    void AddUser( const std::string&);
+    bool FindUser(const std::string&);
 
  private:
   
