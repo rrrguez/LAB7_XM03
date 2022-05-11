@@ -50,7 +50,7 @@ void Data_base::AddUser(const std::string &name) {
   std::string txt = name + ".txt";
   std::ofstream user_file(txt);
   user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
-  user_file.close()  
+  user_file.close();
 }
 
 /**
