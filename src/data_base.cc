@@ -101,8 +101,9 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
   petitions_.emplace_back(petition);
   std::string txt = "../petitions/" + title + ".txt";
   std::ofstream petition_file(txt);
-  petition_file << title << "\n Creador: " << user_name << "\n Meta de firmas: " << signatures << " Firmas actuales: 0";
-  petition_file << 
+  petition_file << title << "\n Creador: " << user_name << "\n Meta de firmas: " << signatures << " Firmas actuales: 0 \n";
+  petition_file << "Meta de donaciones: " << money << "Donaciones actuales: 0€ \n" << description << "\n";
+  petition_file.close();
 }
 
 
@@ -116,18 +117,12 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
 bool Data_base::FindUser(const std::string& user) {
 
   bool find = false;
-  /**
-   * We store users in different txt files, one for each user, and we have to 
-   * list all the files in the directory /data and then compare
-   */
-  std::string path = "../users";
-    for (const auto & entry : std::filesystem::directory_iterator(path)){
-      if (entry.path().filename() == user){
-        find = true;
-        break;
-      }
+  for(int i = 0; i < users_.size(); i++) {
+    if(users_[i].getUserName() == user) {
+      find = true;
+      break;
     }
-
+  }
   return find;
 }
 
@@ -141,17 +136,11 @@ bool Data_base::FindUser(const std::string& user) {
 bool Data_base::FindUser(const std::string& petition) {
 
   bool find = false;
-  /**
-   * We store users in different txt files, one for each user, and we have to 
-   * list all the files in the directory /data and then compare
-   */
-  std::string path = "../petitions";
-    for (const auto & entry : std::filesystem::directory_iterator(path)){
-      if (entry.path().filename() == petition){
-        find = true;
-        break;
-      }
+  for(int i = 0; i < petitions_.size(); i++) {
+    if(petitions_[i].getTitle() == petition) {
+      find = true;
+      break;
     }
-
+  }
   return find;
 }
