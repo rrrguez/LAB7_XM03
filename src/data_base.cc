@@ -28,3 +28,26 @@
  */
 
 #include "../include/data_base.h"
+
+/**
+ * @brief Functions that allows to search for users
+ * 
+ * @param user 
+ * @return true 
+ * @return false 
+ */
+bool Data_base::FindUser(std::string user) {
+
+  /// Search for a name in userfile.txt in data folder
+  std::ifstream userfile;
+  userfile.open("../data/userfile.txt");
+  std::string line;
+  while (std::getline(userfile, line)) {
+    if (line == user) {
+      return true;
+    }
+  }
+  userfile.close();
+
+  return true;
+}
