@@ -29,3 +29,114 @@
 
 #include "../include/user.h"
 
+/**
+ * @brief Construct a new User:: User object
+ * 
+ */
+User::User() {
+  user_name_ = "default_user_name";
+  user_password_ = "password";
+  created_petitions_.resize(0);
+  supported_petitions_.resize(0);
+}
+
+/**
+ * @brief Construct a new User:: User object
+ * 
+ * @param user_name 
+ * @param user_password 
+ */
+User::User(const std::string& user_name, const std::string& user_password) {
+  user_name_ = user_name;
+  user_password_ = user_password;
+  created_petitions_.resize(0);
+  supported_petitions_.resize(0);
+}
+
+/**
+ * @brief Construct a new User:: User object
+ * 
+ * @param user_name 
+ * @param user_password 
+ * @param created_petitions 
+ * @param supported_petitions 
+ */
+User::User(const std::string& user_name, const std::string& user_password,
+const std::vector<Petition>& created_petitions, const std::vector<Petition>& supported_petitions) {
+  user_name_ = user_name;
+  user_password_ = user_password;
+  created_petitions_ = created_petitions;
+  supported_petitions_ = supported_petitions;
+}
+
+/**
+ * @brief 
+ * 
+ * @return const std::string& 
+ */
+const std::string& User::getUserName() const {
+  return user_name_;
+}
+
+/**
+ * @brief 
+ * 
+ * @return const std::string& 
+ */
+const std::string& User::getUserPassword() const {
+  return user_password_;
+}
+
+/**
+ * @brief Get the Created Petitions object
+ * 
+ * @return const std::vector<Petition>& 
+ */
+const std::vector<Petition>& User::getCreatedPetitions() const {
+  return created_petitions_;
+}
+
+/**
+ * @brief Get the Supported Petitions object
+ * 
+ * @return const std::vector<Petition>& 
+ */
+const std::vector<Petition>& User::getSupportedPetitions() const {
+  return supported_petitions_;
+}
+
+/**
+ * @brief 
+ * 
+ * @param user_name 
+ */
+void User::setUserName(const std::string& user_name) {
+ user_name_ = user_name;
+}
+
+/**
+ * @brief 
+ * 
+ * @param user_password 
+ */
+void User::setUserPassword(const std::string& user_password) {
+  user_password_ = user_password;
+}
+
+/**
+ * @brief 
+ * 
+ * @param created_petitions 
+ */
+void User::setCreatedPetitions(const std::vector<Petition>& created_petitions) {
+  created_petitions_ = created_petitions;
+}
+
+/**
+ * @brief 
+ * 
+ * @param supported_petitions 
+ */
+void User::setSupportedPetitions(const std::vector<Petition>& supported_petitions) {
+  supported_petitions_ = supported_petitions;
+}
