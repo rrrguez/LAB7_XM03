@@ -42,12 +42,23 @@ class Data_base {
     Data_base();
     ~Data_base();
     void AddUser(std::string);
-    bool 
+    bool FindUser(std::string);
 
  private:
   
 };
 
+/**
+ * @brief 
+ * 
+ * @param user 
+ * @return true 
+ * @return false 
+ */
+bool Data_base::FindUser(std::string user) {
+  
+  return true;
+}
 
 
 #endif // _DATABASE_
