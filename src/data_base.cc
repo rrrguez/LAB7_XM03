@@ -29,8 +29,22 @@
 
 #include "../include/data_base.h"
 
+/**
+ * @brief Construct a new Data_base::Data_base object
+ * 
+ */
 Data_base::Data_base() {
+  // Create all user files in /users/ folder
+  // open files from /users/ folder
   
+  // Read a file from /users/ folder
+  
+
+
+
+  
+
+
 }
 
 /**
