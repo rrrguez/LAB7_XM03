@@ -47,7 +47,10 @@ void Data_base::AddUser(const std::string &name) {
   std::string passwd;
   std::cout << "Introduzca la contrasena que quiere" << std::endl;
   std::cin >> passwd;
-  
+  std::string txt = name + ".txt";
+  std::ofstream user_file(txt);
+  user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
+  user_file.close();
 }
 
 /**
