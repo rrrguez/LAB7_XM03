@@ -33,18 +33,27 @@
  * @brief Functions that allows to search for users
  * 
  * @param user 
- * @return true 
+ * @return true if user is found, false otherwise
  * @return false 
  */
-bool Data_base::FindUser(std::string user) {
+bool Data_base::FindUser(const std::string& user) {
 
-  /// Search for a name in userfile.txt in data folder
+  bool find = false;
+
+  /// Due to userfile.txt sintax, we have to add "user:" first in 
+  /// std::string& user
+  std::string full_user_sintax = "user:" + user;
+
+  /// Open the file in read mode
   std::ifstream userfile;
   userfile.open("../data/userfile.txt");
   std::string line;
+
+  /// Search for a name in userfile.txt in data folder
   while (std::getline(userfile, line)) {
-    if (line == user) {
-      return true;
+    if (line == full_user_sintax) {
+      find = true;
+      break;
     }
   }
   userfile.close();
