@@ -30,11 +30,31 @@
  * 08/05/22 - Archivo terminado.
  */
 
+#include <iostream>
+
+#include "./user.h"
+
 #ifndef _PETITION_
 #define _PETITION_
 
-#include <iostream>
-
-
+class Petition {
+  public:
+    Petition(const std::string&, const User&, const int&, const std::string&);
+    const std::string& getTitle() const;
+    const User& getCreator() const;
+    const int& getFirms() const;
+    const std::string& getDescription() const;
+    void setTitle(const std::string&);
+    void setCreator(const User&);
+    void setFirms(const int&);
+    void setDescription(const std::string&);
+    //
+    void AddFirm();
+  private:
+    std::string title_;
+    User creator_;
+    int firms_;
+    std::string description_;
+};
 
 #endif
