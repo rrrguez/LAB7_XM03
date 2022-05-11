@@ -30,13 +30,13 @@
  * 08/05/22 - Archivo terminado.
  */
 
-#include <iostream>
-#include <vector>
-#include "../include/petition.h"
 
 #ifndef _USER_
 #define _USER_
 
+#include <iostream>
+#include <vector>
+#include "../include/petition.h"
 
 class User {
   public:

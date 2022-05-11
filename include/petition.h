@@ -30,12 +30,12 @@
  * 08/05/22 - Archivo terminado.
  */
 
-#include <iostream>
-
-#include "./user.h"
 
 #ifndef _PETITION_
 #define _PETITION_
+
+#include <iostream>
+#include "../include/user.h"
 
 class Petition {
   public:
