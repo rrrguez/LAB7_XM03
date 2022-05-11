@@ -54,6 +54,8 @@ class Petition {
     std::string title_;
     User creator_;
     int firms_;
+    int signatures_;
+    int goal_money_;
     int money_;
     std::string description_;
 };

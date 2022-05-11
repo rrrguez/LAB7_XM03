@@ -41,8 +41,10 @@ Petition::Petition(const std::string& title, const User& creator, const int& fir
   title_ = title;
   creator_ = creator;
   firms_ = firms;
+  signatures_ = 0;
   description_ = description;
-  money_ = money;
+  goal_money_ = money;
+  money_ = 0;
 }
 
 /**

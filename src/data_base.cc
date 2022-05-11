@@ -62,7 +62,7 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
       flag = true;
     }
   }
-  std::string txt = "../data/users/" + name + ".txt";
+  std::string txt = "../users/" + name + ".txt";
   std::ofstream user_file(txt);
   user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
   user_file.close();
@@ -77,7 +77,12 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
       break;
     }
   }
-  Petition(title, users_[i], signatures, description, money);
+  Petition petition(title, users_[i], signatures, description, money);
+  petitions_.emplace_back(petition);
+  std::string txt = "../petitions/" + title + ".txt";
+  std::ofstream petition_file(txt);
+  petition_file << title << "\n Creador: " << user_name << "\n Meta de firmas: " << signatures << " Firmas actuales: 0";
+  petition_file << 
 }
 
 
