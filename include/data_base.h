@@ -36,10 +36,18 @@
 
 #include <iostream>
 
-class DataBase {
+
+class Data_base {
  public:
+    Data_base();
+    ~Data_base();
+    void AddUser(std::string);
+    bool 
+
  private:
-}; 
+  
+};
+
 
 
 #endif // _DATABASE_
