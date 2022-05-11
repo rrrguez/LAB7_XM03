@@ -35,6 +35,8 @@
 #define _DATABASE_
 
 #include <iostream>
+#include <string>
+#include <fstream>
 
 
 class Data_base {
@@ -42,11 +44,12 @@ class Data_base {
     Data_base();
     ~Data_base();
     bool AddUser(const std::string &);
-   
+    bool FindUser(const std::string &);
 
  private:
   
 };
+
 
 
 

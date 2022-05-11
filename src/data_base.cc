@@ -30,7 +30,40 @@
 #include "../include/data_base.h"
 
 bool Data_base::AddUser(const std::string &name) {
+  std::cout << "Introduzca el nombre de usuario que quiere" << std::endl;
+  bool flag = false;
+  while(!flag) {
+    if(!FindUser(name)) {
+      std::cerr << "Ese nombre no está disponinble" << std::endl;
+    } else {
+      flag = true;
+    }
+  }
+  std::string passwd;
+  std::cout << "Introduzca la contrasena que quiere" << std::endl;
+  std::cin >> passwd;
   
+}
 
+/**
+ * @brief Functions that allows to search for users
+ * 
+ * @param user 
+ * @return true 
+ * @return false 
+ */
+bool Data_base::FindUser(const std::string &user) {
 
+  /// Search for a name in userfile.txt in data folder
+  std::ifstream userfile;
+  userfile.open("../data/userfile.txt");
+  std::string line;
+  while (std::getline(userfile, line)) {
+    if (line == user) {
+      return true;
+    }
+  }
+  userfile.close();
+
+  return true;
 }
