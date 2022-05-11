@@ -82,14 +82,25 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
       flag = true;
     }
   }
+  User new_user(name, passwd);
+  users_.emplace_back(new_user);
   std::string txt = "../users/" + name + ".txt";
   std::ofstream user_file(txt);
   user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
   user_file.close();
-  User new_user(name, passwd);
-  users_.emplace_back(new_user);
 }
 
+
+
+/**
+ * @brief Functions that allows to add petitions
+ * 
+ * @param title
+ * @param description
+ * @param signatures
+ * @param money
+ * @param user_name
+ */
 void Data_base::AddPetition(const std::string &title, const std::string &description, int signatures, int money, const std::string &user_name) {
   int i;
   for(i = 0; i < users_.size(); i++) {

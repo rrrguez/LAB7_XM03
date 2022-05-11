@@ -46,6 +46,7 @@ class Petition {
     const User& getCreator() const;
     const int& getFirms() const;
     const std::string& getDescription() const;
+    const int& getMoney() const;
     void setTitle(const std::string&);
     void setCreator(const User&);
     void setFirms(const int&);

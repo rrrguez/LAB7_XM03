@@ -66,12 +66,12 @@ const User& Petition::getCreator() const {
 }
 
 /**
- * @brief Firms getter
+ * @brief Signatures getter
  * 
  * @return const int& 
  */
 const int& Petition::getFirms() const {
-  return firms_;
+  return signatures_;
 }
 
 /**
@@ -81,6 +81,15 @@ const int& Petition::getFirms() const {
  */
 const std::string& Petition::getDescription() const {
   return description_;
+}
+
+/**
+ * @brief Money getter
+ * 
+ * @return const int& 
+ */
+const int& Petition::getMoney() const {
+  return money_;
 }
 
 /**
