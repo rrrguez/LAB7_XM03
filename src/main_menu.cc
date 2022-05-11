@@ -40,7 +40,8 @@
 
 int main(int argc, char* argv[]) {
   Usage(argc, argv); ///< Comprobamos los argumentos del programa
-  bool user_in_list, sesion = false;
+  bool user_in_list = false;
+  bool sesion = false;
   char  donative, option = 'A';
 	std::string search_word,user_name,user_passwd,user_passwd2,title,description;
   int money, total_signature;
