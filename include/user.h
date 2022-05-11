@@ -30,32 +30,32 @@
  * 08/05/22 - Archivo terminado.
  */
 
+#include <iostream>
+#include <vector>
 
 #ifndef _USER_
 #define _USER_
 
-#include <iostream>
-#include <vector>
-#include "../include/petition.h"
+class Petition;
 
 class User {
   public:
     User();
     User(const std::string&, const std::string&);
-    User(const std::string&, const std::string&, const std::vector<Petition>&, const std::vector<Petition>&);
+    User(const std::string&, const std::string&, Petition**&, Petition**&);
     const std::string& getUserName() const;
     const std::string& getUserPassword() const;
-    const std::vector<Petition>& getCreatedPetitions() const;
-    const std::vector<Petition>& getSupportedPetitions() const;
+    Petition** getCreatedPetitions() const;
+    Petition** getSupportedPetitions() const;
     void setUserName(const std::string&);
     void setUserPassword(const std::string&);
-    void setCreatedPetitions(const std::vector<Petition>&);
-    void setSupportedPetitions(const std::vector<Petition>&);
+    void setCreatedPetitions(Petition**);
+    void setSupportedPetitions(Petition**);
   private:
     std::string user_name_;
     std::string user_password_;
-    std::vector<Petition> created_petitions_;
-    std::vector<Petition> supported_petitions_;
+    Petition** created_petitions_;
+    Petition** supported_petitions_;
 };
 
 #endif
