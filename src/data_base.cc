@@ -63,13 +63,17 @@ void Data_base::AddUser(const std::string &name) {
 bool Data_base::FindUser(const std::string& user) {
 
   bool find = false;
-
+  /**
+   * We store users in different txt files, one for each user, and we have to 
+   * list all the files in the directory /data and then compare
+   */
   std::string path = "../data";
-    for (const auto & entry : std::filesystem::directory_iterator(path))
-        if (entry.path().filename() == user){
-          find = true;
-          break;
-        }
+    for (const auto & entry : std::filesystem::directory_iterator(path)){
+      if (entry.path().filename() == user){
+        find = true;
+        break;
+      }
+    }
 
   return find;
 }
