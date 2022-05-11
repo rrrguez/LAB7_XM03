@@ -34,7 +34,7 @@
  * 
  * @param name 
  */
-void Data_base::AddUser(const std::string &name) {
+void Data_base::AddUser(const std::string &name, const std::string &passwd) {
   std::cout << "Introduzca el nombre de usuario que quiere" << std::endl;
   bool flag = false;
   while(!flag) {
@@ -44,10 +44,7 @@ void Data_base::AddUser(const std::string &name) {
       flag = true;
     }
   }
-  std::string passwd;
-  std::cout << "Introduzca la contrasena que quiere" << std::endl;
-  std::cin >> passwd;
-  std::string txt = name + ".txt";
+  std::string txt = "../data/users/" + name + ".txt";
   std::ofstream user_file(txt);
   user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
   user_file.close();

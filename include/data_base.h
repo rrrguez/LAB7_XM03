@@ -43,9 +43,9 @@ class Data_base {
  public:
   Data_base();
   ~Data_base();
-  void AddUser( const std::string&);
+  void AddUser( const std::string&, const std::string &);
   bool FindUser(const std::string&);
-
+  bool FindPetition(const std::string&);
 
  private:
   

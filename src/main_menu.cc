@@ -37,9 +37,11 @@
 
 /// Donde declaramos las funciones del main_menu.cc y las librerías necesarias
 #include "../include/main_functions.h"
+#include "data_base.h"
 
 int main(int argc, char* argv[]) {
   Usage(argc, argv); ///< Comprobamos los argumentos del programa
+  Data_base Data_base;
   bool user_in_list = false;
   bool sesion = false;
   char  donative, option = 'A';
@@ -85,13 +87,8 @@ int main(int argc, char* argv[]) {
 					}
 					else{
           	//Igualarlo a la funcion que devuelve si se ha encontrado un usuario con nombre igual, user_in_list
-          	if (user_in_list == true) {
-            	std::cout << "Se ha encontrado un usuario parecido en la base de datos, por lo tanto no se puede crear este usuario" << std::endl;
-          	}
-          	else {
-            	// Crear usuario
-            	std::cout << "Usuario creado de manera correcta, ya puede iniciar sesión" << std::endl;
-          	}
+          	Data_base.AddUser(user_name, user_passwd);
+            std::cout << "Usuario creado de manera correcta, ya puede iniciar sesión" << std::endl;
 					}
           break;
         case 'F':
