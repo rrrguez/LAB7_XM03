@@ -32,11 +32,11 @@
 
 #include <iostream>
 #include <vector>
+#include "../include/petition.h"
 
 #ifndef _USER_
 #define _USER_
 
-class Petition;
 
 class User {
   public:
