@@ -65,11 +65,12 @@ bool Data_base::FindUser(const std::string& user) {
    * list all the files in the directory /data and then compare
    */
   std::string path = "../data";
-    for (const auto & entry : std::filesystem::directory_iterator(path))
+    for (const auto & entry : std::filesystem::directory_iterator(path)){
       if (entry.path().filename() == user){
         find = true;
         break;
       }
+    }
 
   return find;
 }
