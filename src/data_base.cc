@@ -28,3 +28,9 @@
  */
 
 #include "../include/data_base.h"
+
+bool Data_base::AddUser(const std::string &name) {
+  
+
+
+}
