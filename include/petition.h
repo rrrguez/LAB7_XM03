@@ -39,7 +39,7 @@
 
 class Petition {
   public:
-    Petition(const std::string&, const User&, const int&, const std::string&);
+    Petition(const std::string&, const User&, const int&, const std::string&, const int&);
     const std::string& getTitle() const;
     const User& getCreator() const;
     const int& getFirms() const;
@@ -54,6 +54,7 @@ class Petition {
     std::string title_;
     User creator_;
     int firms_;
+    int money_;
     std::string description_;
 };
 

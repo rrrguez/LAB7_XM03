@@ -122,6 +122,10 @@ int main(int argc, char* argv[]) {
 				case 'C':
 					std::cout << "Introduzca titulo de la peticion que desea crear"<<std::endl;
 					std::cin >> title;
+          while(!Data_base.FindPetition(title)) {
+            std::cout << "Nombre de peticion ya en uso, elija otro" << std::endl;
+            std::cin >> title;
+          }
 					std::cout << "Introduzca una breve descripcion"<<std::endl;
 					std::cin >> description;
 					std::cout << "Introduzca total de firmas a recaudar"<<std::endl;
@@ -135,7 +139,7 @@ int main(int argc, char* argv[]) {
 					else{
 						money=0;
 					}
-					//aqui llamariamos a crear firmas
+					Data_base.AddPetition(title, description, total_signature, money, user_name);
           break;
         case 'S':
           std::cout << "Se ha cerrado la sesión de manera correcta" << std::endl;
