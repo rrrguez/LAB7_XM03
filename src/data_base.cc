@@ -29,6 +29,11 @@
 
 #include "../include/data_base.h"
 
+/**
+ * @brief Functions that store user data in the file /data/userfile.txt
+ * 
+ * @param name 
+ */
 void Data_base::AddUser(const std::string &name) {
   std::cout << "Introduzca el nombre de usuario que quiere" << std::endl;
   bool flag = false;
@@ -56,23 +61,12 @@ bool Data_base::FindUser(const std::string& user) {
 
   bool find = false;
 
-  /// Due to userfile.txt sintax, we have to add "user:" first in 
-  /// std::string& user
-  std::string full_user_sintax = "user:" + user;
+  std::string path = "../data";
+    for (const auto & entry : std::filesystem::directory_iterator(path))
+        if (entry.path().filename() == user){
+          find = true;
+          break;
+        }
 
-  /// Open the file in read mode
-  std::ifstream userfile;
-  userfile.open("../data/userfile.txt");
-  std::string line;
-
-  /// Search for a name in userfile.txt in data folder
-  while (std::getline(userfile, line)) {
-    if (line == full_user_sintax) {
-      find = true;
-      break;
-    }
-  }
-  userfile.close();
-
-  return true;
+  return find;
 }
