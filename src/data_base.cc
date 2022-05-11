@@ -29,8 +29,22 @@
 
 #include "../include/data_base.h"
 
+/**
+ * @brief Construct a new Data_base::Data_base object
+ * 
+ */
 Data_base::Data_base() {
+  // Create all user files in /users/ folder
+  // open files from /users/ folder
   
+  // Read a file from /users/ folder
+  
+
+
+
+  
+
+
 }
 
 /**
@@ -68,7 +82,7 @@ bool Data_base::FindUser(const std::string& user) {
    * We store users in different txt files, one for each user, and we have to 
    * list all the files in the directory /data and then compare
    */
-  std::string path = "../data";
+  std::string path = "../users";
     for (const auto & entry : std::filesystem::directory_iterator(path)){
       if (entry.path().filename() == user){
         find = true;
