@@ -38,6 +38,10 @@
 #include <string>
 #include <fstream>
 #include <filesystem>
+#include <vector>
+#include "../include/petition.h"
+#include "../include/user.h"
+
 
 class Data_base {
  public:
@@ -48,7 +52,8 @@ class Data_base {
   bool FindPetition(const std::string&);
 
  private:
-  
+  std::vector<User> users_;
+  std::vector<Petition> petitions_;
 };
 
 

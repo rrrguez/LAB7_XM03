@@ -29,6 +29,10 @@
 
 #include "../include/data_base.h"
 
+Data_base::Data_base() {
+  
+}
+
 /**
  * @brief Functions that store user data in the file /data/userfile.txt
  * 
