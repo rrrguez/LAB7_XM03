@@ -59,7 +59,6 @@ Data_base::Data_base() {
  * @param passwd
  */
 void Data_base::AddUser(const std::string &name, const std::string &passwd) {
-  std::cout << "Introduzca el nombre de usuario que quiere" << std::endl;
   bool flag = false;
   while(!flag) {
     if(!FindUser(name)) {
@@ -75,6 +74,17 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
   User new_user(name, passwd);
   users_.emplace_back(new_user);
 }
+
+void Data_base::AddPetition(const std::string &title, const std::string &description, int signatures, int money, const std::string &user_name) {
+  int i;
+  for(i = 0; i < users_.size(); i++) {
+    if(users_[i].getUserName() == user_name) {
+      break;
+    }
+  }
+  Petition(title, users_[i], signatures, description, money);
+}
+
 
 /**
  * @brief Functions that allows to search for users

@@ -37,11 +37,12 @@
  * @param firms 
  * @param description 
  */
-Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description) {
+Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description, const int& money) {
   title_ = title;
   creator_ = creator;
   firms_ = firms;
   description_ = description;
+  money_ = money;
 }
 
 /**
