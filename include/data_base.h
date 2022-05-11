@@ -35,11 +35,22 @@
 #define _DATABASE_
 
 #include <iostream>
+#include <string>
+#include <fstream>
 
-class DataBase {
+
+class Data_base {
  public:
+    Data_base();
+    ~Data_base();
+    void AddUser( const std::string&);
+    bool FindUser(const std::string&);
+
  private:
-}; 
+  
+};
+
+
 
 
 #endif // _DATABASE_
