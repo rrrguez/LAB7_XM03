@@ -51,6 +51,7 @@ Data_base::Data_base() {
  * @brief Functions that store user data in the file /data/userfile.txt
  * 
  * @param name 
+ * @param passwd
  */
 void Data_base::AddUser(const std::string &name, const std::string &passwd) {
   std::cout << "Introduzca el nombre de usuario que quiere" << std::endl;
@@ -66,6 +67,8 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
   std::ofstream user_file(txt);
   user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
   user_file.close();
+  User new_user(name, passwd);
+  users_.emplace_back(new_user);
 }
 
 /**
@@ -85,6 +88,31 @@ bool Data_base::FindUser(const std::string& user) {
   std::string path = "../users";
     for (const auto & entry : std::filesystem::directory_iterator(path)){
       if (entry.path().filename() == user){
+        find = true;
+        break;
+      }
+    }
+
+  return find;
+}
+
+/**
+ * @brief Functions that allows to search for petitions
+ * 
+ * @param petition
+ * @return true if petition is found, false otherwise
+ * @return false 
+ */
+bool Data_base::FindUser(const std::string& petition) {
+
+  bool find = false;
+  /**
+   * We store users in different txt files, one for each user, and we have to 
+   * list all the files in the directory /data and then compare
+   */
+  std::string path = "../petitions";
+    for (const auto & entry : std::filesystem::directory_iterator(path)){
+      if (entry.path().filename() == petition){
         find = true;
         break;
       }

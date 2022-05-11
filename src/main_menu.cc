@@ -37,7 +37,7 @@
 
 /// Donde declaramos las funciones del main_menu.cc y las librerías necesarias
 #include "../include/main_functions.h"
-#include "data_base.h"
+#include "../include/data_base.h"
 
 int main(int argc, char* argv[]) {
   Usage(argc, argv); ///< Comprobamos los argumentos del programa
