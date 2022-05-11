@@ -28,21 +28,41 @@
  */
 
 #include "../include/data_base.h"
+#include "../include/user.h"
+
+namespace fs = std::filesystem;
 
 /**
  * @brief Construct a new Data_base::Data_base object
  * 
  */
 Data_base::Data_base() {
-  // Create all user files in /users/ folder
-  // open files from /users/ folder
-  
-  // Read a file from /users/ folder
-  
+  /// Create all user files in /users/ folder
 
+  /// Read a file from /users/ folder
+  std::vector<std::string> users_path;
+  std::string path = "../users";
+  for (const auto & entry : fs::directory_iterator(path)) {
+    std::string file_name = entry.path().string();
+    users_path.emplace_back(file_name);
+    file_name.clear();
+  }
 
+  for (int i {0}; i < users_path.size(); i++) {
+    std::ifstream file(users_path[i]);
+    std::string line;
 
-  
+    std::string name;
+    std::string password;
+
+    name = line.erase(0, 9);
+    name.erase(name.size() - 4, name.size());
+
+    /// Coger y leer el nombre y la contraseña de cada persona e ir creado los
+    // usuaios para luego meterlos en el vector de usuarios
+    // mismo comportamiento para las peticiones 
+    
+  }
 
 
 }

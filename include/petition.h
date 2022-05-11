@@ -37,6 +37,8 @@
 #ifndef _PETITION_
 #define _PETITION_
 
+class User;
+
 class Petition {
   public:
     Petition(const std::string&, const User&, const int&, const std::string&, const int&);
