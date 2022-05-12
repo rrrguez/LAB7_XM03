@@ -96,6 +96,7 @@ int main(int argc, char* argv[]) {
         case 'F':
           std::cout << "Introduzca el nombre de la  petición a mostrar su información" << std::endl;
           std::cin >> title;
+          Data_base.ReadPetition(title);
   /*bool existe el titulo
   si el titulo exite se mostraria la info y en este caso avisar que inicie sesion
   si no coincide: "el titulo que se ha colocado no esta en la base de peticiones,
@@ -113,14 +114,14 @@ int main(int argc, char* argv[]) {
   //--------------------------------------------------------------------------------------------------------------------------------
     else {
   std::cout<< "[B]uscar Peticiones\n [C]rear Petición\n [M]is peticiones creadas\n [F]Mostrar información de una petición\n"
-  << "[A]poyar Petición \n [S]Cerrar Sesión\n [X]Salir"<<std::endl;
+  << " [A]poyar Petición\n [S]Cerrar Sesión\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {
           case 'B':
-                  std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
-                  std::cin >> search_word;
-                  Data_base.SearchMotor(search_word);
-                  //Busqueda en la clase; porfa que el mismo metodo imprima la lista
+          std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
+          std::cin >> search_word;
+          Data_base.SearchMotor(search_word);
+            //Busqueda en la clase; porfa que el mismo metodo imprima la lista
           break;
           case 'C':
           std::cout << "Introduzca titulo de la peticion que desea crear"<<std::endl;
