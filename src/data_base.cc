@@ -111,7 +111,7 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
       break;
     }
   }
-  Petition petition(title, users_[i], signatures, description);
+  Petition petition(title, users_[i], signatures, description, money);
   petitions_.emplace_back(petition);
   // std::string txt = "../petitions/" + title + ".txt";
   // std::ofstream petition_file(txt);
