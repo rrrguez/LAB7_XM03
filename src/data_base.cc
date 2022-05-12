@@ -134,7 +134,6 @@ bool Data_base::FindUser(const std::string& user) {
   for(ulong i = 0; i < users_.size(); i++) {
     if(users_[i].getUserName() == user) {
       find = true;
-      break;
     }
   }
   return find;
