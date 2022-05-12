@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
   std::cout<<"¡Bienvenido! ¿Qué desea hacer?" << std::endl;
   while (option!='X') {
     if (sesion==false){
-      std::cout<< "[B]uscar Peticiones\n [F]Mostrar información de una petición\n [I]niciar Sesión\n [C]rear Usuario\n [X]Salir"<<std::endl;
+      std::cout<< " [B]uscar Peticiones\n [F]Mostrar información de una petición\n [I]niciar Sesión\n [C]rear Usuario\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {
         case 'B':
@@ -113,7 +113,7 @@ int main(int argc, char* argv[]) {
   //de aqui hasta abajo es menu con perfil de sesion iniciada
   //--------------------------------------------------------------------------------------------------------------------------------
     else {
-  std::cout<< "[B]uscar Peticiones\n [C]rear Petición\n [M]is peticiones creadas\n [F]Mostrar información de una petición\n"
+  std::cout<< " [B]uscar Peticiones\n [C]rear Petición\n [M]is peticiones creadas\n [F]Mostrar información de una petición\n"
   << " [A]poyar Petición\n [S]Cerrar Sesión\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {

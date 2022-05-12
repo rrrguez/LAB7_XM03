@@ -141,7 +141,7 @@ void Petition::setDescription(const std::string& description) {
  * 
  */
 void Petition::AddFirm() {
-  firms_ += 1;
+  signatures_ = signatures_ + 1;
 }
 
 /**

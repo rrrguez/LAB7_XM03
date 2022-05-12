@@ -171,7 +171,7 @@ void Data_base::SearchMotor(const std::string &title) {
     int aux;
     for(ulong i = 0; i < petitions_.size(); i++) {
       aux = title.compare(petitions_[i].getTitle());
-      if(aux >= 0) {
+      if(aux <= 0) {
         std::cout << petitions_[i].getTitle() << std::endl;
         std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl << std::endl;
       }
@@ -191,14 +191,14 @@ void Data_base::ReadPetition(const std::string &title) {
       break;
     }
   }
-  std::cout << petitions_[i].getTitle() << std::endl << std::endl;
+  std::cout << std::endl << petitions_[i].getTitle() << std::endl << std::endl;
   std::cout << "Creador: " << petitions_[i].getCreator().getUserName() << std::endl;
   std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl;
   int money = petitions_[i].getGoalMoney();
   if(money != 0) {
     std::cout << "Dinero recaudado: " << petitions_[i].getMoney() << "€" << std::endl;
   }
-  std::cout << petitions_[i].getDescription() << std::endl << std::endl;
+  std::cout << std::endl << petitions_[i].getDescription() << std::endl << std::endl;
 }
 
 /**
@@ -221,7 +221,7 @@ User& Data_base::GetUser(const std::string& user) {
  * @param title 
  * @return Petition 
  */
-Petition Data_base::getPetition(const std::string &title) {
+Petition& Data_base::getPetition(const std::string &title) {
 
   ulong i = 0;
   for(ulong i; i < petitions_.size(); i++) {
