@@ -93,6 +93,15 @@ const int& Petition::getMoney() const {
 }
 
 /**
+ * @brief Money goal getter
+ * 
+ * @return const int& 
+ */
+const int& Petition::getMoney() const {
+  return goal_money_;
+}
+
+/**
  * @brief Title setter
  * 
  */
@@ -127,6 +136,19 @@ void Petition::setDescription(const std::string& description) {
   description_ = description;
 }
 
+/**
+ * @brief Adds a signature to petition
+ * 
+ */
 void Petition::AddFirm() {
   firms_ += 1;
+}
+
+/**
+ * @brief Adds amount of money donated to total
+ * 
+ * @param donative 
+ */
+void Petition::Donate(const int &donative) {
+  money_ = money_ + donative;
 }

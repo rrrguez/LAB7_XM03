@@ -47,12 +47,14 @@ class Petition {
     const int& getFirms() const;
     const std::string& getDescription() const;
     const int& getMoney() const;
+    const int& getGoalMoney() const;
     void setTitle(const std::string&);
     void setCreator(const User&);
     void setFirms(const int&);
     void setDescription(const std::string&);
     //
     void AddFirm();
+    void Donate(const int&);
   private:  
     std::string title_;
     User creator_;
