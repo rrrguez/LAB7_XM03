@@ -43,7 +43,7 @@ Data_base::Data_base() {
   std::vector<std::string> users_path;
   std::string u_path = current_path();
   u_path += "/users/";
-  for (const auto & entry : fs::directory_iterator(u_path)) {
+  for (const auto & entry : fs::directory_iterator(u_path)) { 
     std::string file_name = entry.path().string();
     users_path.emplace_back(file_name);
     file_name.clear();
