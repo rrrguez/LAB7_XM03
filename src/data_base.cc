@@ -161,9 +161,11 @@ bool Data_base::FindPetition(const std::string& petition) {
  * @param petition
  */
 void Data_base::SearchMotor(const std::string &title) {
+  std::cout << std::endl;
   if (title.empty()) {
     for (int i {0}; i < petitions_.size(); i++) {
       std::cout << petitions_[i].getTitle() << std::endl;
+      std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl << std::endl;
     }
   } else {
     int aux;
@@ -171,6 +173,7 @@ void Data_base::SearchMotor(const std::string &title) {
       aux = title.compare(petitions_[i].getTitle());
       if(aux >= 0) {
         std::cout << petitions_[i].getTitle() << std::endl;
+        std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl << std::endl;
       }
     }
   }

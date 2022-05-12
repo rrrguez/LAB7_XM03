@@ -165,7 +165,8 @@ int main(int argc, char* argv[]) {
               std::cout << "¿Qué cantidad quiere introducir para realizar el donativo?" << std::endl;
               std::cin >> money;
               Data_base.getPetition(search_word).Donate(money);
-            } else {
+            } 
+            else {
               std::cerr << "Nombre de peticion no es correcto" << std::endl;
             }
           }
