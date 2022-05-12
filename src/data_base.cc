@@ -205,5 +205,11 @@ void Data_base::ReadPetition(const std::string &title) {
  * @return Petition 
  */
 Petition Data_base::getPetition(const std::string &title) {
-  
+  ulong i = 0;
+  for(i; i < petitions_.size(); i++) {
+    if(petitions_[i].getTitle() == title) {
+      break;
+    }
+  }
+  return petitions_[i];
 }
