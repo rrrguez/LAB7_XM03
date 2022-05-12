@@ -130,7 +130,7 @@ int main(int argc, char* argv[]) {
             std::cout << "Nombre de peticion ya en uso, elija otro" << std::endl;
             std::cin >> title;
           }
-          std::cout << "Introduzca una breve descripcion"<<std::endl;
+          std::cout << "Introduzca una breve descripcion, utilizar _ en vez de espacios"<<std::endl;
           std::cin >> description;
           std::cout << "Introduzca total de firmas a recaudar"<<std::endl;
           std::cin >> total_signature;
