@@ -52,6 +52,7 @@ class Data_base {
   void AddPetition(const std::string&, const std::string&, const int, const int, const std::string&);
   bool FindUser(const std::string&);
   bool FindPetition(const std::string&);
+  void SearchMotor(const std::string&);
 
  private:
   std::vector<User> users_;

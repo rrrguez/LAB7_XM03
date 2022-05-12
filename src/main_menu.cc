@@ -57,6 +57,7 @@ int main(int argc, char* argv[]) {
           std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
           std::cin >> search_word;
           //Busqueda en la clase; porfa que el mismo metodo imprima la lista
+          Data_base.SearchMotor(search_word);
           std::cout << "Para apoyar dichas peticiones, no te olvides de iniciar sesión" << std::endl;
         	break;
         case 'I':

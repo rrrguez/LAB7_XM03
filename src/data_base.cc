@@ -138,7 +138,7 @@ bool Data_base::FindUser(const std::string& user) {
 }
 
 /**
- * @brief Functions that allows to search for petitions
+ * @brief Functions that searchs for a petition with a specific name
  * 
  * @param petition
  * @return true if petition is found, false otherwise
@@ -154,4 +154,22 @@ bool Data_base::FindPetition(const std::string& petition) {
     }
   }
   return find;
+}
+
+/**
+ * @brief Functions that allows to search for multiple petitions with names that start the same
+ * 
+ * @param petition
+ */
+void Data_base::SearchMotor(const std::string &title) {
+  int aux;
+  for(ulong i = 0; i < petitions_.size(); i++) {
+    aux = title.compare(petitions_[i].getTitle());
+    if(aux >= 0) {
+      std::cout << petitions_[i].getTitle() << std::endl;
+    }
+  }
+
+
+
 }
