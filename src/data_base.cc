@@ -169,7 +169,4 @@ void Data_base::SearchMotor(const std::string &title) {
       std::cout << petitions_[i].getTitle() << std::endl;
     }
   }
-
-
-
 }
