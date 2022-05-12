@@ -32,19 +32,27 @@
 /**
  * @brief Construct a new Petition:: Petition object
  * 
+ */
+Petition::Petition() {
+  title_ = "title";
+  creator_ = User();
+  firms_ = 0;
+  description_ = "default";
+}
+
+/**
+ * @brief Construct a new Petition:: Petition object
+ * 
  * @param title 
  * @param creator 
  * @param firms 
  * @param description 
  */
-Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description, const int& money) {
+Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description) {
   title_ = title;
   creator_ = creator;
   firms_ = firms;
-  signatures_ = 0;
   description_ = description;
-  goal_money_ = money;
-  money_ = 0;
 }
 
 /**
@@ -66,12 +74,12 @@ const User& Petition::getCreator() const {
 }
 
 /**
- * @brief Signatures getter
+ * @brief Firms getter
  * 
  * @return const int& 
  */
 const int& Petition::getFirms() const {
-  return signatures_;
+  return firms_;
 }
 
 /**
@@ -81,15 +89,6 @@ const int& Petition::getFirms() const {
  */
 const std::string& Petition::getDescription() const {
   return description_;
-}
-
-/**
- * @brief Money getter
- * 
- * @return const int& 
- */
-const int& Petition::getMoney() const {
-  return money_;
 }
 
 /**

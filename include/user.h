@@ -42,20 +42,20 @@ class User {
   public:
     User();
     User(const std::string&, const std::string&);
-    User(const std::string&, const std::string&, Petition**&, Petition**&);
+    User(const std::string&, const std::string&, Petition*&, Petition*&);
     const std::string& getUserName() const;
     const std::string& getUserPassword() const;
-    Petition** getCreatedPetitions() const;
-    Petition** getSupportedPetitions() const;
+    Petition* getCreatedPetitions() const;
+    Petition* getSupportedPetitions() const;
     void setUserName(const std::string&);
     void setUserPassword(const std::string&);
-    void setCreatedPetitions(Petition**);
-    void setSupportedPetitions(Petition**);
+    void setCreatedPetitions(Petition*);
+    void setSupportedPetitions(Petition*);
   private:
     std::string user_name_;
     std::string user_password_;
-    Petition** created_petitions_;
-    Petition** supported_petitions_;
+    Petition* created_petitions_;
+    Petition* supported_petitions_;
 };
 
 #endif

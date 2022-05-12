@@ -37,17 +37,20 @@ namespace fs = std::filesystem;
  * 
  */
 Data_base::Data_base() {
-  /// Create all user files in /users/ folder
+  User u{"admin","admin"};
+  users_.emplace_back(u);
 
-  /// Read a file from /users/ folder
-  std::vector<std::string> users_path;
-  std::string u_path = current_path();
-  u_path += "/users/";
-  for (const auto & entry : fs::directory_iterator(u_path)) {
-    std::string file_name = entry.path().string();
-    users_path.emplace_back(file_name);
-    file_name.clear();
-  }
+  // /// Create all user files in /users/ folder
+
+  // /// Read a file from /users/ folder
+  // std::vector<std::string> users_path;
+  // std::string u_path = current_path();
+  // u_path += "/users/";
+  // for (const auto & entry : fs::directory_iterator(u_path)) {
+  //   std::string file_name = entry.path().string();
+  //   users_path.emplace_back(file_name);
+  //   file_name.clear();
+  // }
 
   // for (ulong i {0}; i < users_path.size(); i++) {
   //   std::ifstream file(users_path[i]);
@@ -84,10 +87,10 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
   }
   User new_user(name, passwd);
   users_.emplace_back(new_user);
-  std::string txt = "../users/" + name + ".txt";
-  std::ofstream user_file(txt);
-  user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
-  user_file.close();
+  // std::string txt = "../users/" + name + ".txt";
+  // std::ofstream user_file(txt);
+  // user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
+  // user_file.close();
 }
 
 
@@ -108,13 +111,13 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
       break;
     }
   }
-  Petition petition(title, users_[i], signatures, description, money);
+  Petition petition(title, users_[i], signatures, description);
   petitions_.emplace_back(petition);
-  std::string txt = "../petitions/" + title + ".txt";
-  std::ofstream petition_file(txt);
-  petition_file << title << "\n Creador: " << user_name << "\n Meta de firmas: " << signatures << " Firmas actuales: 0 \n";
-  petition_file << "Meta de donaciones: " << money << "Donaciones actuales: 0€ \n" << description << "\n";
-  petition_file.close();
+  // std::string txt = "../petitions/" + title + ".txt";
+  // std::ofstream petition_file(txt);
+  // petition_file << title << "\n Creador: " << user_name << "\n Meta de firmas: " << signatures << " Firmas actuales: 0 \n";
+  // petition_file << "Meta de donaciones: " << money << "Donaciones actuales: 0€ \n" << description << "\n";
+  // petition_file.close();
 }
 
 
