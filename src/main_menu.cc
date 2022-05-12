@@ -119,12 +119,13 @@ int main(int argc, char* argv[]) {
           case 'B':
                   std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
                   std::cin >> search_word;
+                  Data_base.SearchMotor(search_word);
                   //Busqueda en la clase; porfa que el mismo metodo imprima la lista
           break;  
           case 'C':
           std::cout << "Introduzca titulo de la peticion que desea crear"<<std::endl;
           std::cin >> title;
-          while(!Data_base.FindPetition(title)) {
+          while(Data_base.FindPetition(title)) {
             std::cout << "Nombre de peticion ya en uso, elija otro" << std::endl;
             std::cin >> title;
           }
