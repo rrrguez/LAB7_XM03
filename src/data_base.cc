@@ -165,11 +165,17 @@ bool Data_base::FindPetition(const std::string& petition) {
  * @param petition
  */
 void Data_base::SearchMotor(const std::string &title) {
-  int aux;
-  for(ulong i = 0; i < petitions_.size(); i++) {
-    aux = title.compare(petitions_[i].getTitle());
-    if(aux >= 0) {
+  if (title.empty()) {
+    for (int i {0}; i < petitions_.size(); i++) {
       std::cout << petitions_[i].getTitle() << std::endl;
+    }
+  } else {
+    int aux;
+    for(ulong i = 0; i < petitions_.size(); i++) {
+      aux = title.compare(petitions_[i].getTitle());
+      if(aux >= 0) {
+        std::cout << petitions_[i].getTitle() << std::endl;
+      }
     }
   }
 }
