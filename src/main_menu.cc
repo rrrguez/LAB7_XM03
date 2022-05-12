@@ -173,6 +173,7 @@ int main(int argc, char* argv[]) {
         case 'F':
           std::cout << "Introduzca el nombre de la  petición a mostrar su información" << std::endl;
           std::cin >> title;
+          Data_base.ReadPetition(title);
           /*bool existe el titulo
           si el titulo exite se mostraria la info
           si no coincide: "el titulo que se ha colocado no esta en la base de peticiones,
