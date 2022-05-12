@@ -152,7 +152,8 @@ int main(int argc, char* argv[]) {
         case 'M':
           std::cout << "Ahora mismo usted tiene creada las peticiones: " << std::endl;
           // Mostrar las listas
-          std::cout <<  Data_base.GetUser(user_name).getCreatedPetitions()[0].getTitle() << std::endl;
+          // std::cout <<  Data_base.GetUser(user_name).getCreatedPetitions()[0].getTitle() << std::endl;
+          Data_base.PrintUserPetitions(user_name);
           break;
         case 'A':
           std::cout << "¿Qué petición quiere apoyar?" << std::endl;
