@@ -197,3 +197,11 @@ void Data_base::ReadPetition(const std::string &title) {
   std::cout << "Dinero recaudado: " << petitions_[i].getMoney() << "€" << std::endl;
   std::cout << petitions_[i].getDescription() << std::endl << std::endl;
 }
+
+User& Data_base::GetUser(const std::string& user) {
+  for(ulong i = 0; i < users_.size(); i++) {
+    if(users_[i].getUserName() == user) {
+      return (users_[i]);
+    }
+  }
+}
