@@ -144,7 +144,7 @@ bool Data_base::FindUser(const std::string& user) {
  * @return true if petition is found, false otherwise
  * @return false 
  */
-bool Data_base::FindUser(const std::string& petition) {
+bool Data_base::FindPetition(const std::string& petition) {
 
   bool find = false;
   for(int i = 0; i < petitions_.size(); i++) {
