@@ -160,16 +160,19 @@ int main(int argc, char* argv[]) {
           std::cin >> search_word;
           if(Data_base.FindPetition(search_word)) {
             Data_base.getPetition(search_word).AddFirm();
-            std::cout << "¿Quiere hacer un donativo a dicha petición [S/N]" << std::endl;
-            std::cin >> donative;
-            if (donative == 'S') {
-              std::cout << "¿Qué cantidad quiere introducir para realizar el donativo?" << std::endl;
-              std::cin >> money;
-              Data_base.getPetition(search_word).Donate(money);
-            } 
-            else {
-              std::cerr << "Nombre de peticion no es correcto" << std::endl;
+            if(Data_base.getPetition(search_word).getGoalMoney() != 0) {
+              std::cout << "¿Quiere hacer un donativo a dicha petición [S/N]" << std::endl;
+              std::cin >> donative;
+              if (donative == 'S') {
+                std::cout << "¿Qué cantidad quiere introducir para realizar el donativo?" << std::endl;
+                std::cin >> money;
+                Data_base.getPetition(search_word).Donate(money);
+              } 
+              else {
+                std::cerr << "Nombre de peticion no es correcto" << std::endl;
+              }
             }
+            
           }
           break;
         case 'F':
