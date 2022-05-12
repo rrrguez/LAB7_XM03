@@ -77,7 +77,7 @@ Data_base::Data_base() {
  * @param passwd
  */
 void Data_base::AddUser(const std::string &name, const std::string &passwd) {
-  if(!FindUser(name)) {
+  if(FindUser(name)) {
     std::cerr << "Ese nombre no está disponinble" << std::endl;
   } else {
     User new_user(name, passwd);
