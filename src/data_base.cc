@@ -37,7 +37,7 @@ namespace fs = std::filesystem;
  * 
  */
 Data_base::Data_base() {
-  User u ("admin","admin");
+  User u{"admin","admin"};
   users_.emplace_back(u);
 
   // /// Create all user files in /users/ folder

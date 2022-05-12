@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
         case 'B':
           std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
           std::cin >> search_word;
-          //Busqueda en la clase; porfa que el mismo metodo imprima la lista
+          //Busqueda en la clase; porfa que el mismo metodo imprima la lista de peticiones
           std::cout << "Para apoyar dichas peticiones, no te olvides de iniciar sesión" << std::endl;
         	break;
         case 'I':
