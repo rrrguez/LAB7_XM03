@@ -48,7 +48,7 @@ Data_base::Data_base() {
     file_name.clear();
   }
 
-  for (int i {0}; i < users_path.size(); i++) {
+  for (ulong i {0}; i < users_path.size(); i++) {
     std::ifstream file(users_path[i]);
     std::string line;
 
@@ -102,7 +102,7 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
  * @param user_name
  */
 void Data_base::AddPetition(const std::string &title, const std::string &description, int signatures, int money, const std::string &user_name) {
-  int i;
+  ulong i;
   for(i = 0; i < users_.size(); i++) {
     if(users_[i].getUserName() == user_name) {
       break;
@@ -128,7 +128,7 @@ void Data_base::AddPetition(const std::string &title, const std::string &descrip
 bool Data_base::FindUser(const std::string& user) {
 
   bool find = false;
-  for(int i = 0; i < users_.size(); i++) {
+  for(ulong i = 0; i < users_.size(); i++) {
     if(users_[i].getUserName() == user) {
       find = true;
       break;
@@ -147,7 +147,7 @@ bool Data_base::FindUser(const std::string& user) {
 bool Data_base::FindPetition(const std::string& petition) {
 
   bool find = false;
-  for(int i = 0; i < petitions_.size(); i++) {
+  for(ulong i = 0; i < petitions_.size(); i++) {
     if(petitions_[i].getTitle() == petition) {
       find = true;
       break;
