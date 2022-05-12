@@ -1,3 +1,0 @@
-username:
-created_petitions:
-supported_petitions:

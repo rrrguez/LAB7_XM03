@@ -14,3 +14,19 @@ Miembros del grupo FIS_E03:
 5º Rebeca Rodríguez Rodríguez ==> alu0101394763@ull.edu.es
 
 6º Pablo Urquía Adrián
+
+COMPILAR:
+  Para compilar, estando en el directorio LAB7_E03 usar el comando:
+    make
+  
+  A la hora de limpiar los archivos *.o usar:
+    make clean
+  
+  En caso de querer borrar el ejecutable solamente:
+    make cleaner
+
+
+EJECUTAR
+  A la hora de ejecutar, estando en el directorio LAB7_E03:
+    ./bin/plataforma_firmas
+
