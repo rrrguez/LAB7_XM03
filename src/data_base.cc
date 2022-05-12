@@ -173,3 +173,22 @@ void Data_base::SearchMotor(const std::string &title) {
     }
   }
 }
+
+
+/**
+ * @brief visulize petition data
+ * 
+ */
+void Data_base::ReadPetition(const std::string &title) {
+  ulong i;
+  for(i = 0; i < petitions_.size(); i++) {
+    if(petitions_[i].getTitle() == title) {
+      break;
+    }
+  }
+  std::cout << petitions_[i].getTitle() << std::endl << std::endl;
+  std::cout << "Creador: " << petitions_[i].getCreator().getUserName() << std::endl;
+  std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl;
+  std::cout << "Dinero recaudado: " << petitions_[i].getMoney() << "€" << std::endl;
+  std::cout << petitions_[i].getDescription() << std::endl << std::endl;
+}
