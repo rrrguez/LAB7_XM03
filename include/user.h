@@ -54,7 +54,7 @@ class User {
   private:
     std::string user_name_;
     std::string user_password_;
-    Petition* created_petitions_;
+    Petition* created_petitions_; 
     Petition* supported_petitions_;
 };
 

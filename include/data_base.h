@@ -56,7 +56,7 @@ class Data_base {
   void SearchMotor(const std::string&);
   void ReadPetition(const std::string&);
   Petition getPetition(const std::string&);
-
+  void PrintUserPetitions(std::string user);
  private:
   std::vector<User> users_;
   std::vector<Petition> petitions_;

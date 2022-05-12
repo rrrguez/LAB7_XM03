@@ -224,10 +224,18 @@ User& Data_base::GetUser(const std::string& user) {
 Petition Data_base::getPetition(const std::string &title) {
 
   ulong i = 0;
-  for(i; i < petitions_.size(); i++) {
+  for(ulong i; i < petitions_.size(); i++) {
     if(petitions_[i].getTitle() == title) {
       break;
     }
   }
   return petitions_[i];
 }
+
+  void Data_base::PrintUserPetitions(std::string user) {
+    for(ulong i{0}; i < petitions_.size(); i++) {
+      if(petitions_[i].getCreator().getUserName() == user) {
+        std::cout << petitions_[i].getTitle() << std::endl;
+      }
+    }
+  }

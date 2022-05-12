@@ -143,3 +143,5 @@ void User::setCreatedPetitions(Petition* created_petitions) {
 void User::setSupportedPetitions(Petition* supported_petitions) {
   supported_petitions_ = supported_petitions;
 }
+
+
