@@ -208,11 +208,13 @@ void Data_base::ReadPetition(const std::string &title) {
  * @return User& 
  */
 User& Data_base::GetUser(const std::string& user) {
-  for(ulong i = 0; i < users_.size(); i++) {
+  ulong i{0};
+  for( ;i < users_.size(); i++) {
     if(users_[i].getUserName() == user) {
-      return (users_[i]);
+      break;
     }
   }
+  return (users_[i]);
 }
 
 /**
