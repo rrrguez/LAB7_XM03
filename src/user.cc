@@ -28,6 +28,7 @@
  */
 
 #include "../include/user.h"
+#include "../include/petition.h"
 
 /**
  * @brief Construct a new User:: User object
@@ -37,9 +38,9 @@ User::User() {
   user_name_ = "default_user_name";
   user_password_ = "password";
   Petition* created_petitions [0];
-  created_petitions_ = created_petitions;
+  created_petitions_ = *created_petitions;
   Petition* supported_petitions [0];
-  supported_petitions_ = supported_petitions;
+  supported_petitions_ = *supported_petitions;
 }
 
 /**
@@ -51,10 +52,8 @@ User::User() {
 User::User(const std::string& user_name, const std::string& user_password) {
   user_name_ = user_name;
   user_password_ = user_password;
-  Petition* created_petitions [0];
-  created_petitions_ = created_petitions;
-  Petition* supported_petitions [0];
-  supported_petitions_ = supported_petitions;
+  Petition* created_petitions = new Petition[0];
+  Petition* supported_petitions = new Petition[0];
 }
 
 /**
@@ -66,7 +65,7 @@ User::User(const std::string& user_name, const std::string& user_password) {
  * @param supported_petitions 
  */
 User::User(const std::string& user_name, const std::string& user_password,
-Petition**& created_petitions, Petition**& supported_petitions) {
+Petition*& created_petitions, Petition*& supported_petitions) {
   user_name_ = user_name;
   user_password_ = user_password;
   created_petitions_ = created_petitions;
@@ -96,7 +95,7 @@ const std::string& User::getUserPassword() const {
  * 
  * @return const std::vector<Petition>& 
  */
-Petition** User::getCreatedPetitions() const {
+Petition* User::getCreatedPetitions() const {
   return created_petitions_;
 }
 
@@ -105,7 +104,7 @@ Petition** User::getCreatedPetitions() const {
  * 
  * @return const std::vector<Petition>& 
  */
-Petition** User::getSupportedPetitions() const {
+Petition* User::getSupportedPetitions() const {
   return supported_petitions_;
 }
 
@@ -132,7 +131,7 @@ void User::setUserPassword(const std::string& user_password) {
  * 
  * @param created_petitions 
  */
-void User::setCreatedPetitions(Petition** created_petitions) {
+void User::setCreatedPetitions(Petition* created_petitions) {
   created_petitions_ = created_petitions;
 }
 
@@ -141,6 +140,6 @@ void User::setCreatedPetitions(Petition** created_petitions) {
  * 
  * @param supported_petitions 
  */
-void User::setSupportedPetitions(Petition** supported_petitions) {
+void User::setSupportedPetitions(Petition* supported_petitions) {
   supported_petitions_ = supported_petitions;
 }
