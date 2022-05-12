@@ -116,24 +116,24 @@ int main(int argc, char* argv[]) {
   << "[A]poyar Petición \n [S]Cerrar Sesión\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {
-  case 'B':
-          std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
-          std::cin >> search_word;
-          //Busqueda en la clase; porfa que el mismo metodo imprima la lista
-  break;
-  case 'C':
-  std::cout << "Introduzca titulo de la peticion que desea crear"<<std::endl;
-  std::cin >> title;
+          case 'B':
+                  std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
+                  std::cin >> search_word;
+                  //Busqueda en la clase; porfa que el mismo metodo imprima la lista
+          break;
+          case 'C':
+          std::cout << "Introduzca titulo de la peticion que desea crear"<<std::endl;
+          std::cin >> title;
           while(!Data_base.FindPetition(title)) {
             std::cout << "Nombre de peticion ya en uso, elija otro" << std::endl;
             std::cin >> title;
           }
-  std::cout << "Introduzca una breve descripcion"<<std::endl;
-  std::cin >> description;
-  std::cout << "Introduzca total de firmas a recaudar"<<std::endl;
-  std::cin >> total_signature;
-  std::cout << "¿quieres que se recojan donativos?(S/N)"<<std::endl;
-  std::cin >> donative;
+          std::cout << "Introduzca una breve descripcion"<<std::endl;
+          std::cin >> description;
+          std::cout << "Introduzca total de firmas a recaudar"<<std::endl;
+          std::cin >> total_signature;
+          std::cout << "¿quieres que se recojan donativos?(S/N)"<<std::endl;
+          std::cin >> donative;
           if (donative == 'S') {
             std::cout << "¿Qué cantidad quiere recaudar?" << std::endl;
             std::cin >> money;
