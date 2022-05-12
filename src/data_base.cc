@@ -232,10 +232,16 @@ Petition Data_base::getPetition(const std::string &title) {
   return petitions_[i];
 }
 
-  void Data_base::PrintUserPetitions(std::string user) {
+/**
+ * @brief prints title of petitions created by the user
+ * 
+ * @param user 
+ */
+void Data_base::PrintUserPetitions(std::string user) {
     for(ulong i{0}; i < petitions_.size(); i++) {
       if(petitions_[i].getCreator().getUserName() == user) {
         std::cout << petitions_[i].getTitle() << std::endl;
+        std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl << std::endl;
       }
     }
   }
