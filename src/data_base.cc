@@ -77,16 +77,12 @@ Data_base::Data_base() {
  * @param passwd
  */
 void Data_base::AddUser(const std::string &name, const std::string &passwd) {
-  bool flag = false;
-  while(!flag) {
-    if(!FindUser(name)) {
-      std::cerr << "Ese nombre no está disponinble" << std::endl;
-    } else {
-      flag = true;
-    }
+  if(!FindUser(name)) {
+    std::cerr << "Ese nombre no está disponinble" << std::endl;
+  } else {
+    User new_user(name, passwd);
+    users_.emplace_back(new_user);
   }
-  User new_user(name, passwd);
-  users_.emplace_back(new_user);
   // std::string txt = "../users/" + name + ".txt";
   // std::ofstream user_file(txt);
   // user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";

@@ -66,6 +66,7 @@ int main(int argc, char* argv[]) {
           std::cin >> user_name;
           std::cout << "Introduzca la contraseña" << std::endl;
           std::cin >> user_passwd;
+          user_in_list = Data_base.FindUser(user_name);
           //Igualarlo a la funcion que devuelve si se ha iniciado sesion correctamente, user_in_list
           if (user_in_list == true) {
             std::cout << "La sesión se ha inicidado correctamente" << std::endl;
@@ -81,16 +82,16 @@ int main(int argc, char* argv[]) {
           std::cin >> user_name;
           std::cout << "Introduzca la contraseña a utilizar" << std::endl;
           std::cin >> user_passwd;
-  std::cout << "vuelva a introducir la contraseña" << std::endl;
+          std::cout << "vuelva a introducir la contraseña" << std::endl;
           std::cin >> user_passwd2;
-  if(user_passwd!=user_passwd2){
-  std::cout << "se han puesto mal las contraseñas\n por favor intentelo otra vez"<<std::endl;
-  }
-  else{
+          if(user_passwd!=user_passwd2){
+          std::cout << "se han puesto mal las contraseñas\n por favor intentelo otra vez"<<std::endl;
+          }
+          else{
             //Igualarlo a la funcion que devuelve si se ha encontrado un usuario con nombre igual, user_in_list
             Data_base.AddUser(user_name, user_passwd);
             std::cout << "Usuario creado de manera correcta, ya puede iniciar sesión" << std::endl;
-  }
+          }
           break;
         case 'F':
           std::cout << "Introduzca el nombre de la  petición a mostrar su información" << std::endl;
