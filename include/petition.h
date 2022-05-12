@@ -53,7 +53,7 @@ class Petition {
     void setDescription(const std::string&);
     //
     void AddFirm();
-  private:
+  private:  
     std::string title_;
     User creator_;
     int firms_;
