@@ -51,6 +51,7 @@ class Data_base {
   void AddUser(const std::string&, const std::string &);
   void AddPetition(const std::string&, const std::string&, const int, const int, const std::string&);
   bool FindUser(const std::string&);
+  User& GetUser(const std::string&);
   bool FindPetition(const std::string&);
   void SearchMotor(const std::string&);
   void ReadPetition(const std::string&);

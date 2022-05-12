@@ -199,12 +199,27 @@ void Data_base::ReadPetition(const std::string &title) {
 }
 
 /**
+ * @brief Returns user object
+ * 
+ * @param user 
+ * @return User& 
+ */
+User& Data_base::GetUser(const std::string& user) {
+  for(ulong i = 0; i < users_.size(); i++) {
+    if(users_[i].getUserName() == user) {
+      return (users_[i]);
+    }
+  }
+}
+
+/**
  * @brief returns petition object with the same name
  * 
  * @param title 
  * @return Petition 
  */
 Petition Data_base::getPetition(const std::string &title) {
+
   ulong i = 0;
   for(i; i < petitions_.size(); i++) {
     if(petitions_[i].getTitle() == title) {
