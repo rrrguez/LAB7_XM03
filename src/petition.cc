@@ -97,7 +97,7 @@ const int& Petition::getMoney() const {
  * 
  * @return const int& 
  */
-const int& Petition::getMoney() const {
+const int& Petition::getGoalMoney() const {
   return goal_money_;
 }
 
