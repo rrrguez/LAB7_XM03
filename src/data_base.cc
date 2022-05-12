@@ -41,28 +41,29 @@ Data_base::Data_base() {
 
   /// Read a file from /users/ folder
   std::vector<std::string> users_path;
-  std::string path = "../users";
-  for (const auto & entry : fs::directory_iterator(path)) {
+  std::string u_path = current_path();
+  u_path += "/users/";
+  for (const auto & entry : fs::directory_iterator(u_path)) {
     std::string file_name = entry.path().string();
     users_path.emplace_back(file_name);
     file_name.clear();
   }
 
-  for (ulong i {0}; i < users_path.size(); i++) {
-    std::ifstream file(users_path[i]);
-    std::string line;
+  // for (ulong i {0}; i < users_path.size(); i++) {
+  //   std::ifstream file(users_path[i]);
+  //   std::string line;
 
-    std::string name;
-    std::string password;
+  //   std::string name;
+  //   std::string password;
 
-    name = line.erase(0, 9);
-    name.erase(name.size() - 4, name.size());
+  //   name = line.erase(0, 9);
+  //   name.erase(name.size() - 4, name.size());
 
-    /// Coger y leer el nombre y la contraseña de cada persona e ir creado los
-    // usuaios para luego meterlos en el vector de usuarios
-    // mismo comportamiento para las peticiones 
+  //   /// Coger y leer el nombre y la contraseña de cada persona e ir creado los
+  //   // usuaios para luego meterlos en el vector de usuarios
+  //   // mismo comportamiento para las peticiones 
     
-  }
+  // }
 
 
 }
@@ -82,12 +83,12 @@ void Data_base::AddUser(const std::string &name, const std::string &passwd) {
       flag = true;
     }
   }
-  User new_user(name, passwd);
-  users_.emplace_back(new_user);
-  std::string txt = "../users/" + name + ".txt";
-  std::ofstream user_file(txt);
-  user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
-  user_file.close();
+  // User new_user(name, passwd);
+  // users_.emplace_back(new_user);
+  // std::string txt = "../users/" + name + ".txt";
+  // std::ofstream user_file(txt);
+  // user_file << passwd << "\n" << "created_petitions: \n \n supported_petitions: \n";
+  // user_file.close();
 }
 
 
