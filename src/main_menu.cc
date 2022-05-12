@@ -66,6 +66,7 @@ int main(int argc, char* argv[]) {
           std::cin >> user_name;
           std::cout << "Introduzca la contraseña" << std::endl;
           std::cin >> user_passwd;
+          user_in_list = Data_base.FindUser(user_name);
           //Igualarlo a la funcion que devuelve si se ha iniciado sesion correctamente, user_in_list
           if (user_in_list == true) {
             std::cout << "La sesión se ha inicidado correctamente" << std::endl;
