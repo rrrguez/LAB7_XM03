@@ -37,11 +37,14 @@
  * @param firms 
  * @param description 
  */
-Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description) {
+Petition::Petition(const std::string& title, const User& creator, const int& firms, const std::string& description, const int& money) {
   title_ = title;
   creator_ = creator;
   firms_ = firms;
+  signatures_ = 0;
   description_ = description;
+  goal_money_ = money;
+  money_ = 0;
 }
 
 /**
@@ -63,12 +66,12 @@ const User& Petition::getCreator() const {
 }
 
 /**
- * @brief Firms getter
+ * @brief Signatures getter
  * 
  * @return const int& 
  */
 const int& Petition::getFirms() const {
-  return firms_;
+  return signatures_;
 }
 
 /**
@@ -78,6 +81,15 @@ const int& Petition::getFirms() const {
  */
 const std::string& Petition::getDescription() const {
   return description_;
+}
+
+/**
+ * @brief Money getter
+ * 
+ * @return const int& 
+ */
+const int& Petition::getMoney() const {
+  return money_;
 }
 
 /**

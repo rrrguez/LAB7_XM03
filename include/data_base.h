@@ -39,6 +39,7 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
+using std::filesystem::current_path;  
 #include "../include/petition.h"
 #include "../include/user.h"
 
@@ -46,10 +47,11 @@
 class Data_base {
  public:
   Data_base();
-  ~Data_base();
-  void AddUser( const std::string&);
+  ~Data_base(){};
+  void AddUser(const std::string&, const std::string &);
+  void AddPetition(const std::string&, const std::string&, const int, const int, const std::string&);
   bool FindUser(const std::string&);
-
+  bool FindPetition(const std::string&);
 
  private:
   std::vector<User> users_;
