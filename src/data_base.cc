@@ -191,9 +191,19 @@ void Data_base::ReadPetition(const std::string &title) {
   std::cout << petitions_[i].getTitle() << std::endl << std::endl;
   std::cout << "Creador: " << petitions_[i].getCreator().getUserName() << std::endl;
   std::cout << "Firmas: " << petitions_[i].getFirms() << std::endl;
-  if(petitions_[i].getMoney()) {
-    
+  int money = petitions_[i].getGoalMoney();
+  if(money != 0) {
+    std::cout << "Dinero recaudado: " << petitions_[i].getMoney() << "€" << std::endl;
   }
-  std::cout << "Dinero recaudado: " << petitions_[i].getMoney() << "€" << std::endl;
   std::cout << petitions_[i].getDescription() << std::endl << std::endl;
+}
+
+/**
+ * @brief returns petition object with the same name
+ * 
+ * @param title 
+ * @return Petition 
+ */
+Petition Data_base::getPetition(const std::string &title) {
+  
 }
