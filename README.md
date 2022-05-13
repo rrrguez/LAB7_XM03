@@ -7,13 +7,13 @@ Miembros del grupo FIS_XM03:
 
 2º Julio Iván Carrasco Armas ==> alu0101110639@ull.edu.es
 
-3º Fernando Marrero Hernández
+3º Fernando Marrero Hernández ==> alu0101413549@ull.edu.es
 
 4º Sergio Perera Márquez ==> alu0101394503@ull.edu.es
 
 5º Rebeca Rodríguez Rodríguez ==> alu0101394763@ull.edu.es
 
-6º Pablo Urquía Adrián
+6º Pablo Urquía Adrián ==> alu0101398327@ull.edu.es
 
 COMPILAR:
   Para compilar, estando en el directorio LAB7_XM03 usar el comando:
