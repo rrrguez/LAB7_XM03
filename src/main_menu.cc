@@ -53,6 +53,7 @@ int main(int argc, char* argv[]) {
       std::cout<< " [B]uscar Peticiones\n [F]Mostrar información de una petición\n [I]niciar Sesión\n [C]rear Usuario\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {
+        case 'X': break;
         case 'B':
           std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
           std::cin >> search_word;
@@ -117,6 +118,8 @@ int main(int argc, char* argv[]) {
   << " [A]poyar Petición\n [S]Cerrar Sesión\n [X]Salir"<<std::endl;
       std::cin >> option;
       switch (option) {
+        case 'X':
+          break;
           case 'B':
           std::cout << "Inserte la palabra a usar como filtro en la búsqueda" << std::endl;
           std::cin >> search_word;
